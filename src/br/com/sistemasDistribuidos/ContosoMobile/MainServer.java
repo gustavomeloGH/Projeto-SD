@@ -1,4 +1,4 @@
-package br.com.sistemasDistribuidos.DuwamishDelivery;
+package br.com.sistemasDistribuidos.ContosoMobile;
 
 import java.net.MalformedURLException;
 import java.rmi.Naming;
@@ -10,20 +10,18 @@ import javax.swing.JOptionPane;
 /**
  * @author Jefferson Coelho
  */
-
 public class MainServer {
 
 	public static void main(String[] args) {
 
 		try {
-			LocateRegistry.createRegistry(1098);
-			Naming.rebind("rmi://localhost/dd", new DuwamishDelivery());
+			LocateRegistry.createRegistry(1099);
+			Naming.rebind("rmi://localhost/cm", new ContosoMobile());
 
 			JOptionPane.showMessageDialog(null, "Servidor rodando");
 		} catch (RemoteException | MalformedURLException e) {
 			JOptionPane.showMessageDialog(null, "(Erro no registro da aplicação) " + e.toString());
 		}
-
 	}
 
 }
