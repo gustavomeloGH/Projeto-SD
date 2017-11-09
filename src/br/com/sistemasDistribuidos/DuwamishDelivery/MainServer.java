@@ -7,16 +7,12 @@ import java.rmi.registry.LocateRegistry;
 
 import javax.swing.JOptionPane;
 
-/**
- * @author Jefferson Coelho
- */
-
 public class MainServer {
 
 	public static void main(String[] args) {
 
 		try {
-			LocateRegistry.createRegistry(1098);
+			LocateRegistry.createRegistry(2015);
 			Naming.rebind("rmi://localhost/dd", new DuwamishDelivery());
 
 			JOptionPane.showMessageDialog(null, "Servidor rodando");

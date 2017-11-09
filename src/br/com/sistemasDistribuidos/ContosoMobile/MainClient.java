@@ -7,9 +7,7 @@ import java.rmi.RemoteException;
 
 import javax.swing.JOptionPane;
 
-/**
- * @author Jefferson Coelho
- */
+
 public class MainClient {
 
 	public static void main(String[] args) {

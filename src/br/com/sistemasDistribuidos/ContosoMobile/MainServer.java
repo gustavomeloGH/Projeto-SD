@@ -7,9 +7,7 @@ import java.rmi.registry.LocateRegistry;
 
 import javax.swing.JOptionPane;
 
-/**
- * @author Jefferson Coelho
- */
+
 public class MainServer {
 
 	public static void main(String[] args) {

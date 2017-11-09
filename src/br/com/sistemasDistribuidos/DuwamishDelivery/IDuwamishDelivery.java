@@ -3,13 +3,12 @@ package br.com.sistemasDistribuidos.DuwamishDelivery;
 import java.rmi.Remote;
 import java.rmi.RemoteException;
 import java.util.ArrayList;
+import java.util.HashMap;
 
-/**
- * @author Jefferson Coelho
- */
+
 public interface IDuwamishDelivery extends Remote {
 
-	public String addProcess(Integer id) throws RemoteException;
+	public String addProcess(Integer id, String phone) throws RemoteException;
 	public String removeProcess(Integer id) throws RemoteException;
-	public ArrayList<Integer> list() throws RemoteException;
+	public HashMap<Integer, ArrayList> list() throws RemoteException;
 }
