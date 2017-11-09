@@ -22,7 +22,7 @@ public class ContosoMobile extends UnicastRemoteObject implements IContosoMobile
 
 			SmsSimples sms = getSms("Seu pedido efetuado com sucesso. Aguarde a entrega em breve!", phone);
 			try {
-				//SendMessage.simpleSend(sms);
+				SendMessage.simpleSend(sms);
 				System.out.printf("Enviou mensagem inicial para: %s\n", phone);
 			} catch (Exception e) {
 				JOptionPane.showMessageDialog(null, "(Erro ao enviar mensagem)" + e.toString());
@@ -39,7 +39,7 @@ public class ContosoMobile extends UnicastRemoteObject implements IContosoMobile
 		} else {
 			SmsSimples sms = getSms("Seu pedido esta proximo ao destino, obrigado!", phone);
 			try {
-				//SendMessage.simpleSend(sms);
+				SendMessage.simpleSend(sms);
 				System.out.printf("Enviou mensagem final para: %s\n", phone);
 			} catch (Exception e) {
 				JOptionPane.showMessageDialog(null, "(Erro ao enviar mensagem)" + e.toString());
@@ -49,7 +49,7 @@ public class ContosoMobile extends UnicastRemoteObject implements IContosoMobile
 	}
 	
 	private SmsSimples getSms (String msg, String phone) {
-		
+		//DADOS DA CONTA SMSSIMPLES
 		SmsSimples sms = new SmsSimples();
 		sms.setUser("JeffersonCoelho");
 		sms.setPassword("vitorlindo");
