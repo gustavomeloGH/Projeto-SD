@@ -7,24 +7,22 @@ import java.rmi.RemoteException;
 
 import javax.swing.JOptionPane;
 
-
 public class MainClient {
 
-	public static void main(String[] args) {
+    public static void main(String[] args) {
 
-		try {
+        try {
 
-			IDuwamishDelivery duwamishDelivery = (IDuwamishDelivery) Naming.lookup("rmi://localhost/dd");
+            IDuwamishDelivery duwamishDelivery = (IDuwamishDelivery) Naming.lookup("rmi://localhost/dd");
 
+        } catch (RemoteException e) {
+            JOptionPane.showMessageDialog(null, "(Erro no registro da aplicação) " + e.toString());
+        } catch (NotBoundException e) {
+            JOptionPane.showMessageDialog(null, e.toString());
+        } catch (MalformedURLException e) {
+            JOptionPane.showMessageDialog(null, "(Erro no link da aplicação) " + e.toString());
+        }
 
-		} catch (RemoteException e) {
-			JOptionPane.showMessageDialog(null, "(Erro no registro da aplica��o) " + e.toString());
-		} catch (NotBoundException e) {
-			JOptionPane.showMessageDialog(null, e.toString());
-		} catch (MalformedURLException e) {
-			JOptionPane.showMessageDialog(null, "(Erro no link da aplica��o) " + e.toString());
-		}
-
-	}
+    }
 
 }

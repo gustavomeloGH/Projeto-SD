@@ -9,19 +9,19 @@ import javax.swing.JOptionPane;
 
 public class MainServer {
 
-	public static void main(String[] args) {
+    public static void main(String[] args) {
 
-		try {
+        try {
 
-			LocateRegistry.createRegistry(3050);
-			Naming.rebind("rmi://localhost/aw", new AdventureWorks());
+            LocateRegistry.createRegistry(3050);
+            Naming.rebind("rmi://localhost/aw", new AdventureWorks());
 
-			JOptionPane.showMessageDialog(null, "Servidor rodando");
-		} catch (RemoteException | MalformedURLException e) {
+            JOptionPane.showMessageDialog(null, "Servidor rodando");
+        } catch (RemoteException | MalformedURLException e) {
 
-			JOptionPane.showMessageDialog(null, "(Erro no registro da aplica��o) " + e.toString());
-		}
+            JOptionPane.showMessageDialog(null, "(Erro no registro da aplicação) " + e.toString());
+        }
 
-	}
+    }
 
 }

@@ -9,19 +9,18 @@ import javax.swing.JOptionPane;
 
 public class MainClient {
 
-	public static void main(String[] args) {
+    public static void main(String[] args) {
 
-		
-		try {
-			IFabrikam fabrikam = (IFabrikam) Naming.lookup("rmi://localhost/fb");
-			System.out.println(fabrikam.listProcess().isEmpty());
-			fabrikam.startCheckAllStatus();
-			fabrikam.openProcess(123, "81983445318");
-			System.out.println(fabrikam.listProcess().isEmpty());
-		} catch (RemoteException | NotBoundException | MalformedURLException e) {
-			JOptionPane.showMessageDialog(null, "(Erro no registro da aplica��o) " + e.toString());
-		} 
+        try {
+            IFabrikam fabrikam = (IFabrikam) Naming.lookup("rmi://localhost/fb");
+            System.out.println(fabrikam.listProcess().isEmpty());
+            fabrikam.startCheckAllStatus();
+            fabrikam.openProcess(123, "81983445318");
+            System.out.println(fabrikam.listProcess().isEmpty());
+        } catch (RemoteException | NotBoundException | MalformedURLException e) {
+            JOptionPane.showMessageDialog(null, "(Erro no registro da aplicação) " + e.toString());
+        }
 
-	}
+    }
 
 }

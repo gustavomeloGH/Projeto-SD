@@ -11,35 +11,35 @@ import java.util.HashMap;
 
 import javax.swing.JOptionPane;
 
-
-
 public class AdventureWorks extends UnicastRemoteObject implements IAdventureWorks {
 
-	private static final long serialVersionUID = 1L;
-	private IFabrikam fabrikam;
+    private static final long serialVersionUID = 1L;
+    private IFabrikam fabrikam;
 
-	public AdventureWorks() throws RemoteException {
-		initServer();
-		fabrikam.startCheckAllStatus();
-	}
+    public AdventureWorks() throws RemoteException {
+        initServer();
+        fabrikam.startCheckAllStatus();
+    }
 
-	public void sendRequest(Integer id, String phone) throws RemoteException {
+    @Override
+    public void sendRequest(Integer id, String phone) throws RemoteException {
 
-		fabrikam.openProcess(id, phone);
-	}
+        fabrikam.openProcess(id, phone);
+    }
 
-	public HashMap<Integer, ArrayList> listRequest() throws RemoteException {
+    @Override
+    public HashMap<Integer, ArrayList> listRequest() throws RemoteException {
 
-		return fabrikam.listProcess();
-	}
+        return fabrikam.listProcess();
+    }
 
-	private void initServer() throws RemoteException {
+    private void initServer() throws RemoteException {
 
-		try {
-			fabrikam = (IFabrikam) Naming.lookup("rmi://localhost/fb");
+        try {
+            fabrikam = (IFabrikam) Naming.lookup("rmi://localhost/fb");
 
-		} catch (MalformedURLException | NotBoundException e) {
-			JOptionPane.showMessageDialog(null, e.toString());
-		}
-	}
+        } catch (MalformedURLException | NotBoundException e) {
+            JOptionPane.showMessageDialog(null, e.toString());
+        }
+    }
 }
