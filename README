@@ -1,5 +1,6 @@
-Projeto Sistemas Distribuidos 
+<h3> Projeto Sistemas Distribuidos </h3> 
 
-Sistema simples para utilizar conceitos de Sistemas Distribuidos e o JAVA RMI.
-
-Obs: Necessário utilização da Lib - facilitaSdk: www.facilitamovel.com.br
+<ul> 
+  <li>Sistema simples para utilizar conceitos de Sistemas Distribuidos e o JAVA RMI.</li>
+  <li>Obs: Necessário utilização da Lib - facilitaSdk: www.facilitamovel.com.br</li>
+ </ul>
