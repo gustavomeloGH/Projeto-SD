@@ -12,7 +12,7 @@ public class MainServer {
     public static void main(String[] args) {
 
         try {
-            LocateRegistry.createRegistry(2015);
+            LocateRegistry.createRegistry(1099);
             Naming.rebind("rmi://localhost/dd", new DuwamishDelivery());
 
             JOptionPane.showMessageDialog(null, "Servidor rodando");

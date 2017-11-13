@@ -14,8 +14,8 @@ public class MainClient {
         try {
             
             IAdventureWorks adventureWorks = (IAdventureWorks) Naming.lookup("rmi://localhost/aw");
-            Tabelas tabelas = new Tabelas();
-            tabelas.setAdventureWorks(adventureWorks);
+            GUITabelas tabelas = new GUITabelas(adventureWorks);
+            tabelas.show();
             
         } catch (RemoteException e) {
             JOptionPane.showMessageDialog(null, "(Erro no registro da aplicação) " + e.toString());

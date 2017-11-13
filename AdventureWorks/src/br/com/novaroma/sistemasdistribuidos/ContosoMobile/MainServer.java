@@ -12,7 +12,7 @@ public class MainServer {
     public static void main(String[] args) {
 
         try {
-            LocateRegistry.createRegistry(1099);
+            LocateRegistry.createRegistry(2000);
             Naming.rebind("rmi://localhost/cm", new ContosoMobile());
 
             JOptionPane.showMessageDialog(null, "Servidor rodando");

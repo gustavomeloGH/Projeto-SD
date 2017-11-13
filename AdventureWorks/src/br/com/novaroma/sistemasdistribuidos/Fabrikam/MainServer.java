@@ -12,7 +12,7 @@ public class MainServer {
     public static void main(String[] args) {
 
         try {
-            LocateRegistry.createRegistry(2090);
+            LocateRegistry.createRegistry(2050);
             Naming.rebind("rmi://localhost/fb", new Fabrikam());
             
             JOptionPane.showMessageDialog(null, "Servidor rodando");

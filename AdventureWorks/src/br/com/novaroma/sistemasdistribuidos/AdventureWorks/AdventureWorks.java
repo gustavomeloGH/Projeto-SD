@@ -29,7 +29,6 @@ public class AdventureWorks extends UnicastRemoteObject implements IAdventureWor
 
     @Override
     public HashMap<Integer, ArrayList> listRequest() throws RemoteException {
-
         return fabrikam.listProcess();
     }
 

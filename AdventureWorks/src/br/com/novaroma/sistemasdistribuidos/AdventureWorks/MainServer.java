@@ -13,7 +13,7 @@ public class MainServer {
 
         try {
 
-            LocateRegistry.createRegistry(3050);
+            LocateRegistry.createRegistry(2090);
             Naming.rebind("rmi://localhost/aw", new AdventureWorks());
 
             JOptionPane.showMessageDialog(null, "Servidor rodando");
