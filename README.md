@@ -6,9 +6,11 @@
  </ul>
 
 <h4> Outras observações: </h4> 
-<h5> É necessário seguir a ordem para colocar os servidores no ar: </h5>
+<h5> É necessário seguir a ordem para colocar os servidores no ar: 
 <ul> 
   <li>1 - ContosoMobile ou DuwamishDelivery</li>
   <li>2 - Fabrikam</li>
   <li>3 - AdventureWorks</li>
  </ul>
+
+</h5>
