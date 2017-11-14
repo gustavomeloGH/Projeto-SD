@@ -1,4 +1,4 @@
-<h3> Projeto Sistemas Distribuidos </h3> 
+<h3> Projeto Sistemas Distribuidos - JAVA RMI </h3> 
 
 <ul> 
   <li>Sistema simples para utilizar conceitos de Sistemas Distribuidos e o JAVA RMI.</li>
